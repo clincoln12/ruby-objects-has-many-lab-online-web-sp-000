@@ -1,18 +1,24 @@
-class Song
-  attr_accessor :artist, :name
-  
-  @@songs = []
-  
-  def initialize(song)
-    @song = song
+class Song 
+  attr_accessor :name, :artist 
+
+  @@all = []
+
+  def initialize(name, artist=nil)
     @name = name
+    @artist = artist
+    @@all << self
   end
-  
-  def self.add_song(song)
-    @@songs << song
+
+  def artist_name
+    if self.artist
+      self.artist.name
+    else
+      nil
+    end
   end
-  
-  def self.song_names
-    @@songs
+
+  def self.all
+    @@all
   end
 end
+
