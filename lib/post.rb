@@ -5,4 +5,8 @@ class Post
     @@all = []
     @@all << title
   end
+  
+  def self.all
+    @@all
+  end
 end
