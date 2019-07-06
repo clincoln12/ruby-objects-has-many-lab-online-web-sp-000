@@ -14,5 +14,6 @@ class Post
   
   def author_name
    @author.name
+   unless @author.name == true return nil
   end
 end
