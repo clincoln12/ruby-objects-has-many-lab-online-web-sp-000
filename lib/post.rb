@@ -13,10 +13,6 @@ class Post
   end
   
   def author_name
-    if @author.name.include?(name)
-      @author.name
-    else
-      nil
-    end
+    @author_name
   end
 end
